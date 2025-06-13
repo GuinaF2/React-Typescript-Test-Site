@@ -231,7 +231,7 @@ function App() {
               <h3>Adquirir Igreja</h3>
               <p>
                 Duplica permanentemente a geração de dinheiro de TODOS os seus
-                negócios, pois tudo que vem de Deus é limpo.
+                negócios, pela fé dos outros...
               </p>
               <button
                 className="button upgrade-button"
