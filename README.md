@@ -33,27 +33,30 @@ Follow these steps to get the project running on your local machine.
 First, clone this repository to your local machine.
 ```bash
 git clone <repository-url>
-2. Navigate to the Project Directory
 ```
+**2. Navigate to the Project Directory
+
 Change your current directory to the newly cloned project folder.
 
-Bash
 
+```bash
 cd <project-directory>
-3. Install Dependencies
+```
+**3. Install Dependencies
 
 This command reads the package.json file and downloads all the necessary libraries and packages into the node_modules directory.
 
-Bash
-
+```bash
 npm install
-4. Run the Development Server
+```
+**4. Run the Development Server
 
 Start the Vite development server. This will compile the project and make it available on a local address with Hot Module Replacement (HMR) enabled.
 
-Bash
-
+```bash
 npm run start
+```
+
 Once the command executes, your terminal will display a message similar to this:
 
   VITE v5.x.x  ready in 312 ms
