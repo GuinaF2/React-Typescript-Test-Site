@@ -34,7 +34,7 @@ First, clone this repository to your local machine.
 ```bash
 git clone https://github.com/GuinaF2/React-Typescript-Test-Site.git
 ```
-**2. Navigate to the Project Directory
+**2. Navigate to the Project Directory**
 
 Change your current directory to the newly cloned project folder.
 
@@ -42,14 +42,14 @@ Change your current directory to the newly cloned project folder.
 ```bash
 cd React-Typescript-Test-Site
 ```
-**3. Install Dependencies
+**3. Install Dependencies**
 
 This command reads the package.json file and downloads all the necessary libraries and packages into the node_modules directory.
 
 ```bash
 npm install
 ```
-**4. Run the Development Server
+**4. Run the Development Server**
 
 Start the Vite development server. This will compile the project and make it available on a local address with Hot Module Replacement (HMR) enabled.
 
@@ -61,16 +61,18 @@ Once the command executes, your terminal will display a message similar to this:
 
   VITE v5.x.x  ready in 312 ms
 
-  ➜  Local:   http://localhost:5173/
-  ➜  Network: use --host to expose
-5. View in Browser
+* **➜  Local:   http://localhost:5173/**
+* **➜  Network: use --host to expose**
+  
+**5. View in Browser**
 
 Open your web browser and navigate to the local URL provided:
 http://localhost:5173
 
 The application is now running locally. Any changes saved in the source code will be instantly reflected in the browser.
 
-📜 Available Scripts
+## 📜 Available Scripts
+
 The package.json file includes the following script:
 
-npm run start: Starts the application in development mode with HMR.
+* **npm run start: Starts the application in development mode with HMR.**
