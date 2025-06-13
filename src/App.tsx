@@ -165,7 +165,6 @@ function App() {
           <a href="index.html">Scam Game</a>
         </h1>
         <div>
-          <!--dasdasd-->
           <a href="#" onClick={() => setTela("home")}>
             Inicio
           </a>
