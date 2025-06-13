@@ -1,6 +1,6 @@
 # [Scam Clicker]
 
-##📖 About the Project
+## 📖 About the Project
 This project is an incremental clicker game where the player performs simple actions—like clicking a button—to earn currency and purchase upgrades to generate income automatically.
 
 It was developed for the second term of the Front-End Programming course, instructed by Professor José Carlos Domingues Flores.
