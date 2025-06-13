@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease;
+}
+
+/* BOTÕES */
+.button {
+  padding: 15px 30px;
+  font-size: 1em;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#clickButton {
+  font-size: 1.5em;
+  padding: 20px 40px;
+  background-color: #4CAF50;
+  border-radius: 16px;
+  animation: bounce 1s infinite alternate;
+}
+
+#clickButton:hover {
+  transform: scale(1.1);
+}
+
+.upgrade-button {
+  background-color: #333;
+  margin-top: 20px;
+  
+}
+
+.upgrade-button:hover{
+  transform: translateY(-2px);
+}
+
+.upgrade-button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* UPGRADES GRID */
+.upgrades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.upgrade-card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.upgrade-card:hover {
+  transform: translateY(-3px);
+}
+
+.upgrade-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.upgrade-card p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.upgrade-card button {
+  background-color: #4CAF50;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+span{
+  font-size:1.4em;
+  font-weight: bold; 
+  margin-right: 10px;
+}
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navbar h1 {
+    margin-bottom: 10px;
+  }
+
+  .navbar div {
+    margin-top: 10px;
+  }
+
+  .container {
+    padding: 20px 10px;
+  }
+
+  #clickButton, .upgrade-button {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .upgrades-grid {
+    grid-template-columns: 1fr;
+  }
+}
