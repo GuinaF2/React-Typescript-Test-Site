@@ -1,4 +1,4 @@
-# [Project Name]
+# [Scan Clicker]
 
 This guide provides instructions for the installation and execution of this project, built with the Vite development environment and the React library.
 
