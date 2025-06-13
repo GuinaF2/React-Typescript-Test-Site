@@ -18,7 +18,7 @@ The main goal of this project was to apply fundamental concepts of modern front-
 
 * **Event Handling:** Implement user interactions, such as clicks and button events.
 
-##💡 Key Learnings
+## 💡 Key Learnings
 During the development, several key practical skills were acquired:
 
 * **useEffect Deep Dive:** A deeper understanding of the useEffect dependency array and the importance of cleanup functions to avoid memory leaks, especially when using setInterval.
