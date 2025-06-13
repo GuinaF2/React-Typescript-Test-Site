@@ -5,7 +5,7 @@ This project is an incremental clicker game where the player performs simple act
 
 It was developed for the second term of the Front-End Programming course, instructed by Professor José Carlos Domingues Flores.
 
-##🎯 Learning Objectives
+## 🎯 Learning Objectives
 The main goal of this project was to apply fundamental concepts of modern front-end development in a practical application. The key objectives were:
 
 * **State Management:** Learn to use React Hooks, especially useState and useEffect, to manage the application's state dynamically.
