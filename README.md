@@ -32,7 +32,7 @@ Follow these steps to get the project running on your local machine.
 
 First, clone this repository to your local machine.
 ```bash
-git clone <repository-url>
+git clone repository-url
 ```
 **2. Navigate to the Project Directory
 
@@ -40,7 +40,7 @@ Change your current directory to the newly cloned project folder.
 
 
 ```bash
-cd <project-directory>
+cd project-directory
 ```
 **3. Install Dependencies
 
