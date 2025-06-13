@@ -34,7 +34,7 @@ First, clone this repository to your local machine.
 ```bash
 git clone <repository-url>
 2. Navigate to the Project Directory
-
+```
 Change your current directory to the newly cloned project folder.
 
 Bash
