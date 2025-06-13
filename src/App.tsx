@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 
 // --- CONSTANTES BASE DO JOGO ---
-const BASE_PPS_NEGOCIO1 = 1; // Sequestro Falso
-const BASE_PPS_NEGOCIO2 = 10; // Divulgar Tigrinho Falso
-const BASE_PPS_NEGOCIO3 = 50; // Urubu Do Pix
+const BASE_PPS_NEGOCIO1 = 1; // Vender Curso
+const BASE_PPS_NEGOCIO2 = 10; // Divulgar Plataforma de Aposta
+const BASE_PPS_NEGOCIO3 = 50; // Esquema de Piramide
 
+//Criação de numero aleatório para aposta na Função ComprarAposta
 const gerarNumeroAleatorio = (min: number, max: number): number => {
   return Math.random() * (max - min) + min;
 };
@@ -44,24 +45,23 @@ function App() {
     if (pontosps <= 0) {
       return; 
     }
-
     // Cria um novo intervalo
     const intervalId = setInterval(() => {
       // Usamos a forma funcional para garantir que estamos adicionando ao valor mais recente dos pontos
       setPontos((pontosAtuais) => pontosAtuais + pontosps);
     }, 1000); // Roda a cada 1000ms (1 segundo)
-
-    // --- A PARTE MAIS IMPORTANTE ---
-    // Retorna uma função de limpeza. O React irá executá-la antes de rodar o efeito novamente.
+    // Retorna uma função de limpeza. Para previnir valor "fantasma" na aposta bem sucedida
     return () => {
       clearInterval(intervalId); // Limpa o intervalo anterior
     };
   }, [pontosps]); // A dependência continua sendo 'pontosps'
 
+  //adiciona aos pontos do jogador o valor do clique
   function handleClick() {
     setPontos(pontos + valorClique);
   }
 
+  //Função de compra do 1ºNegócio, cobra o valor, aumenta o preço e aumenta a quantidade exibida em 1
   function comprarNegocio1() {
     if (pontos >= custoUpgrade1) {
       setPontos(pontos - custoUpgrade1);
@@ -72,6 +72,7 @@ function App() {
     }
   }
 
+  //Similar a primeira função
   function comprarNegocio2() {
     if (pontos >= custoUpgrade2) {
       setPontos(pontos - custoUpgrade2);
@@ -81,7 +82,7 @@ function App() {
       alert("Pontos insuficientes!");
     }
   }
-
+  //Similar a primeira função
   function comprarNegocio3() {
     if (pontos >= custoUpgrade3) {
       setPontos(pontos - custoUpgrade3);
@@ -92,6 +93,7 @@ function App() {
     }
   }
 
+  //Se tiver dinheiro suficiente, cobra o valor, multiplica e aumenta o valor inicial
   function comprarUpgradeClique() {
     if (pontos >= custoGlobalClickValueMultiplier) {
       setPontos(pontos - custoGlobalClickValueMultiplier);
@@ -102,6 +104,7 @@ function App() {
     }
   }
 
+  //Função de compra unica, possui booleana para alteração de estado dos elementos
   function comprarigrejaUpgrade() {
     if (pontos >= custoIgreja && !hasigrejaUpgrade) {
       setPontos(pontos - custoIgreja);
@@ -113,7 +116,7 @@ function App() {
       );
     }
   }
-
+  //Função de compra unica, possui booleana para alteração de estado dos elementos
   function comprarIndiano() {
     if (pontos >= custoIndiano && !hasIndianoUpgrade) {
       setPontos(pontos - custoIndiano);
@@ -124,7 +127,8 @@ function App() {
       );
     }
   }
-
+  
+  //Cria um numero aleatório que a depender pode ser bem ou mal sucedido
   function comprarAposta() {
     if (pontos >= custoAposta) {
       setPontos(pontos - custoAposta);
@@ -153,7 +157,7 @@ function App() {
       alert("Pontos insuficientes!");
     }
   }
-
+  //Codigo HTML
     return (
     <>
       <div className="navbar">
@@ -161,6 +165,7 @@ function App() {
           <a href="index.html">Scam Game</a>
         </h1>
         <div>
+          <!--dasdasd-->
           <a href="#" onClick={() => setTela("home")}>
             Inicio
           </a>
